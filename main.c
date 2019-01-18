@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <math.h>
 struct point{
     int x;
     int y;
@@ -57,10 +57,41 @@ int main()
             }
         }
         if (code ==3){
+            for(int i = 0; i < index; i++){
+                printf("di%dliangchedezuobiaoweizhiwei(%d,%d)\n",i+1,arr[i].x,arr[i].y);
             
+            }
+            printf("dianjihuichejixu\n");
+            char  a;
+                scanf("%c",&a);
+                scanf("%c",&a);
+
         }
         if (code ==4){
-            
+            printf("qingshurunindeweizhixzuobiaoyzuobiao\n");
+            double min = 1000;
+            int ID;
+            int x;
+            int y;
+            scanf("%d",&x);
+            scanf("%d",&y);
+
+            for (int i = 0; i<index; i++)
+            {
+                int dx = x - arr[i].x;
+                int dy = y - arr[i].y;
+                double l = sqrt(dx * dx + dy * dy);
+
+                if (min > 1){
+                    min = 1;
+                    ID = i + 1;
+                }
+             }
+             printf("di%dlclnzj,jlw%lf\n", ID, min);
+             printf("dianjihuichejixu\n");
+             char a ;
+            scanf("%c",&a);
+             scanf("%c",&a);
         }
         if (code ==5){
             printf("dianjihuiche,tuichuxitong\n");
